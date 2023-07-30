@@ -18,10 +18,12 @@ header {
   flex-wrap: wrap;
   gap: 5rem;
   padding-left: 2rem;
+  justify-content: center;
 }
 
 header > h1 {
   color: linear-gradient(to right, #99f6e4, #f7ebeb);
+  justify-content: center;
 }
 
 nav {
@@ -128,6 +130,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding: 2rem;
 }
 
 #my-skills > section {
@@ -204,25 +207,125 @@ section {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: large;
 }
+
 #problem-solving a:hover {
   color: rgb(94, 94, 189);
   font-size: x-large;
 }
+
 #problem-solving h4 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: bolder;
   font-size: large;
 }
+
 #problem-solving li {
   margin-block: 2rem;
 }
+
 #my-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  padding: 2rem;
 }
 
+#my-projects > section{
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 100px
+  
+
+}
+
+hr {
+  background-color: black;
+  width: 80%;
+  margin-top: 1rem;
+}
+
+
+#my-projects img {
+  width: 100%;
+  height: 100%;
+}
+
+#my-projects  article {
+  background-image: linear-gradient(to bottom, #99f6e4, #f7ebeb);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  border-radius: 1rem;
+}
+
+#my-projects p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: large;
+  width: 80%;
+  margin-top: 1rem;
+}
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%; 
+  
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.4);
+}
+
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+html { 
+  scroll-behavior: smooth; 
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#img-content{
+  width: 60%;
+  height: 60%;
+}
 footer {
-  margin-inline: 10px;
-  height: 600px;
-  background-color: aqua;
+  height: 300px;
+  background-color: rgb(77, 73, 73, 0.9);
+}
+footer > a {
+  background-color:white;
 }
 
 @media (max-width: 750px) {
@@ -286,6 +389,8 @@ footer {
   .exp-proj > div {
     height: 50%;
     border-radius: 2%;
+    padding-block: 2rem;
+    width: 50%;
   }
 
   .about-me-section {
@@ -293,8 +398,20 @@ footer {
   }
 }
 
-@media (max-width: 1100px) {
-    #problem-solving, #lang-and-fram{
-        width: 80%;
-    }
+@media (max-width: 1160px) {
+  #problem-solving,
+  #lang-and-fram {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1200px) {
+  #my-projects > section{
+    display: grid;
+    grid-template-columns: 3fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 100px
+    
+  
+  }
 }
