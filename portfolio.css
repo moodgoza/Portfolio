@@ -52,13 +52,16 @@ nav > a:hover {
 }
 
 #about-me {
+  height: 100vh;
   padding: 2rem;
   display: flex;
   gap: 1rem;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-article > h1 {
+article > h1 {git s
   display: flex;
   justify-content: center;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
