@@ -272,6 +272,10 @@ hr {
   margin-top: 1rem;
 }
 
+#my-projects h2 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: x-large;
+}
 .modal {
   display: none;
   position: fixed;
@@ -328,6 +332,7 @@ html {
 footer  a {
   color: #60278f;
 }
+
 footer {
   height: 20rem;
   display: flex;
