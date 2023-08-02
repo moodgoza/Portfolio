@@ -1,3 +1,12 @@
+*{
+  box-sizing: border-box;
+}
+:root {
+  --background-color: #101820;
+  --color: #FEE715;
+  --h1-font:'Maitree', sans-serif;
+  --p-font: font-family: 'Forum', sans-serif; 
+}
 main {
   display: flex;
   flex-direction: column;
@@ -10,20 +19,13 @@ a {
 }
 body {
   margin: 0;
-  background-image: url("./background.jpg");
+  background-color: var(--background-color);
 }
 
-header {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5rem;
-  padding-left: 2rem;
-  justify-content: center;
-}
 
 header > h1 {
-  color: linear-gradient(to right, #99f6e4, #f7ebeb);
-  justify-content: center;
+  color: var(--background-color);
+
 }
 
 nav {
@@ -31,13 +33,13 @@ nav {
   flex-wrap: wrap;
   gap: 15rem;
   padding: 10px;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
 nav > a {
   padding: 1rem;
-  color: darkblue;
+  color: var(--color);
 
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: large;
@@ -46,13 +48,16 @@ nav > a {
   font-weight: bold;
 }
 
-nav > a:hover {
-  color: white;
-  background-image: linear-gradient(to right, #09967a, #cfc9c9);
+#definition{
+  color: var(--color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "eurostile", sans-serif;
 }
 
 #about-me {
-  height: 100vh;
+  
   padding: 2rem;
   display: flex;
   gap: 1rem;
@@ -61,17 +66,20 @@ nav > a:hover {
   justify-content: center;
 }
 
-article > h1 {git s
+article > h1 {
   display: flex;
   justify-content: center;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: var(--h1-font);
   font-size: x-large;
-  background-color: rgb(255, 255, 255, 0);
+  color: var(--color);
+  flex-direction: column;
 }
+
+
 
 .about-me-section {
   display: flex;
-  gap: 10rem;
+  gap: 100px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -83,37 +91,44 @@ article > h1 {git s
 }
 
 .about-me-section p {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  color: black;
+  font-family: 'Maitree', sans-serif; font-weight: normal; font-style: normal;
+    color:var(--color);
 }
 
 .text-about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 1rem;
-  background-image: linear-gradient(to right, #99f6e4, #f7ebeb);
+  background-color: var(--background-color);
   border-radius: 5%;
   width: 30%;
-  border: 0 solid #e5e7eb;
-  box-shadow: #99f6e4;
+  
 }
+
 
 .exp-proj {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 1rem;
-  width: 15%;
+  justify-content: space-between;
+  width: 100%;
+  height: 50%;
 }
 
 .exp-proj > div {
-  background-image: linear-gradient(to right, #99f6e4, #f7ebeb);
+  background-color: var(--background-color);
   display: flex;
   flex-direction: column;
   border-radius: 5%;
   justify-content: center;
-  height: 40%;
+  height: 100%;
+  width: 50%;
   align-items: center;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: var(--color);
+    border: 0.1rem solid var(--color);
 }
 
 .exp-proj > div > span {
@@ -121,26 +136,26 @@ article > h1 {git s
   justify-content: center;
 }
 
-.exp-proj > div:hover {
-  background-image: linear-gradient(to right, #09967a, #cfc9c9);
-}
-
 section {
   margin-inline: 10px;
 }
 
 #my-skills {
+  
   display: flex;
   flex-direction: column;
   gap: 1rem;
   padding: 2rem;
+  align-items: center;
 }
 
 #my-skills > section {
+  color: var(--color);
   display: flex;
-  gap: 1rem;
+  gap: 100px;
   flex-wrap: wrap;
   justify-content: center;
+
 }
 
 #lang-and-fram {
@@ -148,10 +163,11 @@ section {
   flex-direction: column;
   gap: 1rem;
   padding-left: 1rem;
-  background-image: linear-gradient(to bottom, #99f6e4, #f7ebeb);
-  width: 40%;
+  background-color: var(--background-color);
+  width: 45%;
   border-radius: 2rem;
   padding: 3rem;
+  border: 0.125rem solid var(--color);
 }
 
 #lang-and-fram > h2,
@@ -174,14 +190,14 @@ section {
 #lang-and-fram > div {
   width: 80%;
   height: 2rem;
-  background-color: #d1d5db;
+  background-color: var(--color);
   border-radius: 9999px;
 }
 
 #lang-and-fram > div > div {
   width: 80%;
   height: 2rem;
-  background-color: #09967a;
+  background-color: #156962;
   border-radius: 9999px;
   display: flex;
   align-items: center;
@@ -189,7 +205,7 @@ section {
 
 #lang-and-fram > div > div > span {
   margin: 0.5rem;
-  color: white;
+  color: var(--color);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: large;
 }
@@ -199,27 +215,28 @@ section {
   flex-direction: column;
   gap: 1rem;
   padding-left: 1rem;
-  background-image: linear-gradient(to bottom, #99f6e4, #f7ebeb);
-  width: 40%;
+  background-color: var(--background-color);
+  width: 45%;
   border-radius: 2rem;
   padding: 3rem;
+  border: 0.125rem solid var(--color);
 }
 
 #problem-solving a {
-  color: black;
+  color: var(--color);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: large;
 }
 
 #problem-solving a:hover {
   color: rgb(94, 94, 189);
-  font-size: x-large;
 }
 
 #problem-solving h4 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: bolder;
   font-size: large;
+  color: var(--color);
 }
 
 #problem-solving li {
@@ -239,6 +256,7 @@ section {
   grid-template-columns: 3fr 3fr;
   grid-template-rows: 1fr 1fr;
   gap: 100px;
+  color: var(--color);
 }
 
 hr {
@@ -247,15 +265,8 @@ hr {
   margin-top: 1rem;
 }
 
-#my-projects img {
-  width: 100%;
-  height: auto;
-  
-  
-}
-
 #my-projects article {
-  background-image: linear-gradient(to bottom, #99f6e4, #f7ebeb);
+border: 0.125rem solid var(--color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -273,6 +284,7 @@ hr {
   font-size: large;
   width: 80%;
   margin-top: 1rem;
+  
 }
 
 #my-projects h2 {
@@ -333,7 +345,7 @@ html {
 }
 
 footer  a {
-  color: #60278f;
+  color:#00539C;
 }
 
 footer {
@@ -342,7 +354,8 @@ footer {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  background-color: rgb(77, 73, 73, 0.95);
+  background-color: var(--color);
+  opacity: 0.88;
 }
 
 #social > section {
@@ -355,6 +368,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--background-color);
 }
 
 #copy > span {
@@ -362,6 +376,7 @@ footer {
 }
 
 #social > h4 {
+  color: var(--background-color);
   display: flex;
   justify-content: center;
 }
@@ -420,12 +435,9 @@ footer {
     width: 30%;
   }
 
-  .exp-proj {
-    width: 60%;
-  }
+  
 
   .exp-proj > div {
-    height: 50%;
     border-radius: 2%;
     padding-block: 2rem;
     width: 50%;
