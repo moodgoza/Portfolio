@@ -71,7 +71,7 @@ nav > a {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 6rem;
+  margin-top: 10rem;
 }
 
 #about-me {
@@ -81,6 +81,7 @@ nav > a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-block: 5rem;
 }
 
 article > h1 {
@@ -263,12 +264,27 @@ li {
   line-height: var(--line-height-p);
   font-size: var(--font-size-p);
   font-weight: var(--font-weight-p);
+  
 }
+
 
 #problem-solving a:hover {
   color: rgb(94, 94, 189);
+  position: relative;
 }
 
+#problem-solving a:hover::before {
+  content: "show";
+  font-size: x-small;
+  position: absolute;
+  margin-top: -20px;
+  background-color: #686767;
+  color: var(--color-h1);
+  padding: 0.125rem;
+  border-radius: 5%;
+
+ 
+}
 #problem-solving h4 {
   color: var(--color-h1);
 
@@ -303,6 +319,12 @@ hr {
   margin-top: 1rem;
 }
 
+#my-projects img {
+  height:300px; 
+  width:500px;
+  border-radius: 1%;
+}
+
 #my-projects article {
   background-color: var(--box-background);
 
@@ -311,7 +333,7 @@ hr {
   align-items: center;
 
   padding: 3rem;
-  border-radius: 1rem;
+  border-radius: 1%;
 }
 
 #my-projects article > div {
@@ -460,6 +482,11 @@ footer {
 
   nav {
     gap: 2rem;
+  }
+
+  #my-projects img {
+    height: 150px;
+    width: 250px;
   }
 }
 
