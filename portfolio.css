@@ -1,11 +1,20 @@
-*{
+* {
   box-sizing: border-box;
 }
 :root {
-  --background-color: #101820;
-  --color: #FEE715;
-  --h1-font:'Maitree', sans-serif;
-  --p-font: font-family: 'Forum', sans-serif; 
+  --background-color: #121212;
+  --color: #b4afaf;
+  --h-color: ;
+  --h1-font: "Poppins", Arial, sans-serif;
+  --p-font: "Poppins", Arial, sans-serif;
+  --font-size-p: 18px;
+  --line-height-p: 1.8;
+  --font-weight-p: 400;
+  --font-weight-h1: 700;
+  --font-size-h1: 28px;
+  --line-height-h1: 1.5;
+  --color-h1: #fff;
+  --box-background: #2b2a2a;
 }
 main {
   display: flex;
@@ -22,42 +31,50 @@ body {
   background-color: var(--background-color);
 }
 
-
-header > h1 {
-  color: var(--background-color);
-
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 
 nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 15rem;
+
   padding: 10px;
   justify-content: space-around;
   align-items: center;
+  background-color: var(--box-background);
 }
 
 nav > a {
   padding: 1rem;
-  color: var(--color);
+  color: var(--color-h1);
 
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: large;
+  font-family: var(--h1-font);
+  line-height: var(--line-height-h1);
+  font-weight: var(--font-weight-h1);
+
   background-color: rgb(255, 255, 255, 0);
   border-radius: 50%;
   font-weight: bold;
 }
 
-#definition{
-  color: var(--color);
+#definition {
+  color: var(--color-h1);
+
+  font-family: var(--h1-font);
+  line-height: var(--line-height-h1);
+  font-weight: var(--font-weight-h1);
+
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "eurostile", sans-serif;
+  margin-top: 6rem;
 }
 
 #about-me {
-  
   padding: 2rem;
   display: flex;
   gap: 1rem;
@@ -69,19 +86,27 @@ nav > a {
 article > h1 {
   display: flex;
   justify-content: center;
+  color: var(--color-h1);
+
   font-family: var(--h1-font);
-  font-size: x-large;
-  color: var(--color);
+  line-height: var(--line-height-h1);
+  font-weight: var(--font-weight-h1);
+
   flex-direction: column;
 }
 
-
+article > h1::after {
+  content: "";
+  width: 100%;
+  height: 0.125rem;
+  background-color: var(--color);
+}
 
 .about-me-section {
   display: flex;
   gap: 100px;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .about-me-section > img {
@@ -91,8 +116,11 @@ article > h1 {
 }
 
 .about-me-section p {
-  font-family: 'Maitree', sans-serif; font-weight: normal; font-style: normal;
-    color:var(--color);
+  font-family: var(--p-font);
+  color: var(--color);
+  line-height: var(--line-height-p);
+  font-size: var(--font-size-p);
+  font-weight: var(--font-weight-p);
 }
 
 .text-about-me {
@@ -100,12 +128,10 @@ article > h1 {
   flex-direction: column;
   justify-content: center;
   padding: 1rem;
-  background-color: var(--background-color);
-  border-radius: 5%;
-  width: 30%;
-  
+  background-color: var(--box-background);
+  border-radius: 1%;
+  width: 50%;
 }
-
 
 .exp-proj {
   display: flex;
@@ -114,21 +140,23 @@ article > h1 {
   justify-content: space-between;
   width: 100%;
   height: 50%;
+  font-family: var(--p-font);
+  line-height: var(--line-height-p);
+  font-size: var(--font-size-p);
+  font-weight: var(--font-weight-p);
 }
 
 .exp-proj > div {
-  background-color: var(--background-color);
+  background-color: var(--box-background);
   display: flex;
   flex-direction: column;
-  border-radius: 5%;
+  border-radius: 1%;
   justify-content: center;
   height: 100%;
   width: 50%;
   align-items: center;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    color: var(--color);
-    border: 0.1rem solid var(--color);
+
+  color: var(--color);
 }
 
 .exp-proj > div > span {
@@ -141,7 +169,6 @@ section {
 }
 
 #my-skills {
-  
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -155,7 +182,6 @@ section {
   gap: 100px;
   flex-wrap: wrap;
   justify-content: center;
-
 }
 
 #lang-and-fram {
@@ -163,28 +189,31 @@ section {
   flex-direction: column;
   gap: 1rem;
   padding-left: 1rem;
-  background-color: var(--background-color);
+  background-color: var(--box-background);
   width: 45%;
   border-radius: 2rem;
   padding: 3rem;
-  border: 0.125rem solid var(--color);
 }
 
 #lang-and-fram > h2,
 #problem-solving > h2 {
   display: flex;
   justify-content: center;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: x-large;
-  background-color: rgb(255, 255, 255, 0);
+  color: var(--color-h1);
+
+  font-family: var(--h1-font);
+  line-height: var(--line-height-h1);
+  font-weight: var(--font-weight-h1);
 }
 
 #lang-and-fram > h4 {
   display: flex;
-  
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: large;
-  background-color: rgb(255, 255, 255, 0);
+
+  color: var(--color-h1);
+
+  font-family: var(--h1-font);
+  line-height: var(--line-height-h1);
+  font-weight: var(--font-weight-h1);
 }
 
 #lang-and-fram > div {
@@ -192,6 +221,10 @@ section {
   height: 2rem;
   background-color: var(--color);
   border-radius: 9999px;
+  font-family: var(--p-font);
+  line-height: var(--line-height-p);
+  font-size: var(--font-size-p);
+  font-weight: var(--font-weight-p);
 }
 
 #lang-and-fram > div > div {
@@ -205,9 +238,11 @@ section {
 
 #lang-and-fram > div > div > span {
   margin: 0.5rem;
-  color: var(--color);
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: large;
+  color: var(--color-h1);
+  font-family: var(--p-font);
+  line-height: var(--line-height-p);
+  font-size: var(--font-size-p);
+  font-weight: var(--font-weight-p);
 }
 
 #problem-solving {
@@ -215,17 +250,19 @@ section {
   flex-direction: column;
   gap: 1rem;
   padding-left: 1rem;
-  background-color: var(--background-color);
+  background-color: var(--box-background);
   width: 45%;
   border-radius: 2rem;
   padding: 3rem;
-  border: 0.125rem solid var(--color);
 }
 
-#problem-solving a {
+#problem-solving a,
+li {
   color: var(--color);
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: large;
+  font-family: var(--p-font);
+  line-height: var(--line-height-p);
+  font-size: var(--font-size-p);
+  font-weight: var(--font-weight-p);
 }
 
 #problem-solving a:hover {
@@ -233,10 +270,11 @@ section {
 }
 
 #problem-solving h4 {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-weight: bolder;
-  font-size: large;
-  color: var(--color);
+  color: var(--color-h1);
+
+  font-family: var(--h1-font);
+  line-height: var(--line-height-h1);
+  font-weight: var(--font-weight-h1);
 }
 
 #problem-solving li {
@@ -266,11 +304,12 @@ hr {
 }
 
 #my-projects article {
-border: 0.125rem solid var(--color);
+  background-color: var(--box-background);
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   padding: 3rem;
   border-radius: 1rem;
 }
@@ -280,16 +319,20 @@ border: 0.125rem solid var(--color);
   height: 100%;
 }
 #my-projects p {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: large;
+  font-family: var(--p-font);
+  line-height: var(--line-height-p);
+  font-size: var(--font-size-p);
+  font-weight: var(--font-weight-p);
   width: 80%;
   margin-top: 1rem;
-  
 }
 
 #my-projects h2 {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: x-large;
+  color: var(--color-h1);
+
+  font-family: var(--h1-font);
+  line-height: var(--line-height-h1);
+  font-weight: var(--font-weight-h1);
 }
 .modal {
   display: none;
@@ -344,8 +387,8 @@ html {
   max-height: 100%;
 }
 
-footer  a {
-  color:#00539C;
+footer a {
+  color: #00539c;
 }
 
 footer {
@@ -354,7 +397,7 @@ footer {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  background-color: var(--color);
+  background-color: var(--box-background);
   opacity: 0.88;
 }
 
@@ -368,17 +411,21 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--background-color);
-}
-
-#copy > span {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: var(--p-font);
+  line-height: var(--line-height-p);
+  font-size: var(--font-size-p);
+  font-weight: var(--font-weight-p);
+  color: var(--color-h1);
 }
 
 #social > h4 {
-  color: var(--background-color);
   display: flex;
   justify-content: center;
+  color: var(--color-h1);
+
+  font-family: var(--h1-font);
+  line-height: var(--line-height-h1);
+  font-weight: var(--font-weight-h1);
 }
 
 @media (max-width: 750px) {
@@ -423,10 +470,6 @@ footer {
     flex: 2;
   }
 
-  nav {
-    gap: 2rem;
-  }
-
   .about-me-section > img {
     width: 30%;
   }
@@ -434,8 +477,6 @@ footer {
   .text-about-me {
     width: 30%;
   }
-
-  
 
   .exp-proj > div {
     border-radius: 2%;
